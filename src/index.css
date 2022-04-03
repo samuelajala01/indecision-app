@@ -1,14 +1,200 @@
 * {
   margin: 0;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%
 }
 
 body {
-  padding: 20px;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #1a1d27
 }
 
-p {
-  padding: 1rem;
+button{
+  cursor: pointer;
+}
+
+.header {
+  background-color: #20222b;
+  color: white;
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 0;
+}
+
+.header__title {
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+.header__subtitle{
+  color: #a5afd7;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0
+}
+
+.container{
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+.big_button{
+  background-color: #964396;
+  border: none;
+  border-bottom: .6rem solid #4a3070;
+  color: #fff;
+  font-weight: bold;
+  font-size: 3.2rem;
+  width: 100%;
+  margin-bottom: 1.6rem;
+  padding: 1.6rem;
+}
+
+.big_button:disabled{
+  opacity: 0.5;
+  cursor: default;
+}
+
+.button{
+  background-color: #964396;
+  border: none;
+  border-bottom: .3rem solid #5c2a5c;
+  color: #fff;
+  font-weight: 500;
+  padding: 1.2rem
+}
+
+.button--link{
+  background: none;
+  border: none;
+  color: #a5afd7;
+  padding: 0;
+}
+
+.widget{
+  background:#282b36;
+  margin-bottom: 4.8rem;
+}
+
+.widget-header{
+  background-color: #23262e;
+  color: #a5afd7;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget-header__title{
+  margin: 0;
+}
+
+.widget__message{
+  color: #a5afd7;
+  margin: 0;
+  padding:3.2rem;
+  text-align: center;
+  border-bottom: 1px solid #7a82a0;
+}
+
+p{
+  padding:1rem;
+}
+
+.option{
+  display: flex;
+  justify-content: space-between;
+  padding: 3.2rem 1.6rem;
+  border-bottom: 1px solid #4c536b;
+}
+
+.option__text{
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0;
+  word-break: break-all;
+}
+
+.add-option-error{
+  color: #7a82a0;
+  font-style: italic;
+  margin-top: 1.6rem;
+  padding:0 1.6rem;
+}
+
+.add-option{
+  display: flex;
+  flex-direction: column;
+  padding:1.6rem;
+}
+
+.add-option__input{
+  background-color: #20222b;
+  border: none;
+  border-bottom: .3rem solid #464b5e;
+  color: #7a82a0;
+  margin-right: 1.2rem;
+  flex-grow: 1;
+  margin: 0 0 1.2rem 0;
+  padding: 1.2rem
+}
+
+.ReactModalPortal > div{
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+.modal{
+  background-color: #20222b;
+  color: #fff;
+  max-width: 30rem;
+  outline: none;
+  padding: 3.2rem;
+  text-align: center;
+}
+
+.modal__title{
+  margin: 0 0 1.6rem 0;
+}
+
+.modal__body{
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 0 3.2rem 0;
+  word-break: break-all;
+}
+
+@media (min-width: 45rem){
+  .add-option{
+    flex-direction: row;
+  }
+  .add-option__input{
+    margin: 0 1.2rem 0 0;
+  }
+
+  .header{
+    margin-bottom: 4.8rem;
+  }
+  .big_button{
+    margin-bottom: 4.8rem;
+  }
 }
